@@ -1,0 +1,72 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset, a img { border: none; }
+
+input[type="text"], input[type="email"], input[type="tel"], textarea { -webkit-appearance: none; }
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+input[type="submit"], button { cursor: pointer; }
+
+div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
+table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+
+html { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
+
+@font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+.icon, [class^="icon-"], [class*=" icon-"] { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
+
+.icon-sepa:before { content: ""; }
+
+.icon-skrill:before { content: ""; }
+
+body { font-family: "Open Sans", sans-serif; font-size: 12px; line-height: 1.4; }
+
+a { text-decoration: none; color: inherit; }
+a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform: scale(0.95); }
+
+* { -webkit-transition: 0.5s; transition: 0.5s; }
+
+.inner { width: 1200px; margin: 0 auto; position: relative; padding: 0 10px; height: inherit; }
+
+.btn { text-transform: uppercase; background: #2e272f; color: white; padding: 8px 20px; font-weight: bold; text-align: center; border-radius: 3px; font-size: 16px; }
+
+.header { height: 755px; background: url("../img/header-bg.jpg") center top no-repeat; }
+.header p { font-size: 15px; margin-bottom: 15px; color: white; }
+.header p:last-of-type { margin-bottom: 0; }
+.header__box { position: absolute; right: 0; bottom: 0; font-size: 0; }
+.header__about, .header__gal { width: 300px; background: #61B82E; padding: 56px 56px 42px 46px; display: inline-block; }
+.header__about h2, .header__about h3, .header__gal h2, .header__gal h3 { color: white; text-transform: uppercase; padding-bottom: 25px; border-bottom: 1px solid white; font-size: 36px; margin-bottom: 25px; font-weight: normal; }
+.header__about a, .header__gal a { display: inline-block; }
+.header__about p:last-of-type, .header__gal p:last-of-type { margin-bottom: 40px; }
+.header__gal { width: 370px; background: #2e272f; }
+.header__gal a { background: #61B82E; }
+.header__logo { position: absolute; right: 0; top: 0; display: inline-block; }
+.header__logo h1 { opacity: 0; font-size: 1px; color: transparent; }
+.header__nav.is-visible { display: block; }
+.header__burger { width: 40px; height: 40px; position: absolute; left: 10px; top: 15px; display: none; }
+.header__burger span { display: block; height: 4px; background: white; margin-top: 7px; }
+
+.ben { height: 435px; background: -webkit-gradient(linear, left bottom, left top, from(#2B252C), to(#352D36)); background: -webkit-linear-gradient(bottom, #2B252C 0%, #352D36 100%); background: linear-gradient(to top, #2B252C 0%, #352D36 100%); }
+.ben .inner:before { display: block; content: ""; width: 1170px; margin: 0 auto; height: 309px; background: url("../img/splash.png") center center no-repeat; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+ *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 1200px){
+ .inner{ width: auto; } }
+@media only screen and (max-width: 767px){
+ .header__burger{ display: block; } }
+
+
+
+/*# sourceMappingURL=style.css.map */

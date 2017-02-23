@@ -1,0 +1,124 @@
+$primary: #61B82E
+$secondary: #2e272f
+
+
+$desc: 1200
+$tab: 1024
+$mob: 767
+
+=flex($vert:space-between, $hor:stretch)
+	display: flex
+	justify-content: $vert
+	align-items: $hor
+	flex-wrap: wrap
+
+
+a
+	text-decoration: none
+	color: inherit
+	&:active
+		transform: scale(.95)
+
+*
+	transition: .5s
+
+.inner
+	width: 1200px
+	margin: 0 auto
+	position: relative
+	padding: 0 10px
+	height: inherit
+	+r($desc)
+		width: auto
+
+.btn
+	text-transform: uppercase
+	background: $secondary
+	color: white
+	padding: 8px 20px
+	font-weight: bold
+	text-align: center
+	border-radius: 3px
+	font-size: 16px
+
+
+.header
+	height: 755px
+	background: url('../img/header-bg.jpg') center top no-repeat
+	//position: relative
+	p
+		font-size: 15px
+		margin-bottom: 15px
+		color: white
+		&:last-of-type
+			margin-bottom: 0
+	&__box
+		position: absolute
+		right: 0
+		bottom: 0
+		//+clr
+		font-size: 0
+	&__about, &__gal
+		width: 300px
+		background: $primary
+		padding: 56px 56px 42px 46px
+		//float: left
+		display: inline-block
+		h2, h3
+			color: white
+			text-transform: uppercase
+			padding-bottom: 25px
+			border-bottom: 1px solid white
+			font-size: 36px
+			margin-bottom: 25px
+			font-weight: normal
+		a
+			display: inline-block
+		p:last-of-type
+			margin-bottom: 40px
+	&__gal
+		width: 370px
+		background: $secondary
+		a
+			background: $primary
+
+	&__logo
+		position: absolute
+		right: 0
+		top: 0
+		display: inline-block
+		h1
+			opacity: 0
+			font-size: 1px
+			color: transparent
+
+	&__nav
+		&.is-visible
+			display: block
+
+	&__burger
+		width: 40px
+		height: 40px
+		position: absolute
+		left: 10px
+		top: 15px
+		display: none
+		+r($mob)
+			display: block
+		span
+			display: block
+			height: 4px
+			background: white
+			margin-top: 7px
+
+.ben
+	height: 435px
+	background: linear-gradient(to top, #2B252C 0%, #352D36 100%)
+	.inner
+		&:before
+			display: block
+			content: ''
+			width: 1170px
+			margin: 0 auto
+			height: 309px
+			background: url("../img/splash.png") center center no-repeat
