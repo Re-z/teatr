@@ -41,6 +41,7 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
 .inner { width: 1200px; margin: 0 auto; position: relative; padding: 0 10px; height: inherit; }
 
 .btn { text-transform: uppercase; background: #2e272f; color: white; padding: 8px 20px; font-weight: bold; text-align: center; border-radius: 3px; font-size: 16px; }
+.btn:hover { background: white; color: #2e272f; }
 
 .header { height: 755px; background: url("../img/header-bg.jpg") center top no-repeat; }
 .header p { font-size: 15px; margin-bottom: 15px; color: white; }
