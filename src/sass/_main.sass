@@ -22,7 +22,9 @@ a
 
 *
 	transition: .5s
-
+	&::selection
+		background: $primary
+		color: white
 .inner
 	width: 1200px
 	margin: 0 auto
@@ -153,9 +155,15 @@ a
 			margin-bottom: 0
 	.block
 		padding: 60px 0
+		background: $secondary
 		h2,h3
 			font-size: 21px
 			margin-bottom: 25px
+			color: white
+		&_light
+			background: $third
+			h2,h3
+				color: $secondary
 
 .links
 	background: linear-gradient(to top, #2B252C 0%, #352D36 100%)
@@ -288,4 +296,80 @@ a
 		text-transform: uppercase
 
 .who
-	background: $third
+	background: $secondary
+	.inner
+		+clr
+	&__content
+		width: 850px
+		float: left
+		+clr
+		img
+			margin-right: 20px
+			float: left
+			&:nth-last-of-type(odd)
+				float: right
+				margin-left: 20px
+				margin-right: 0
+	&__aside
+		width: 300px
+		float: right
+		height: 100%
+		padding: 0 15px
+		//text-align: right
+		ul
+			margin-bottom: 25px
+			li
+				font-size: 16px
+				padding-bottom: 10px
+				border-bottom: 1px solid rgba(#727176, .2)
+				margin-bottom: 10px
+				color: #727176
+				position: relative
+				padding-left: 25px
+				&:last-of-type
+					border-bottom: none
+				&:before
+					display: block
+					content: ''
+					position: absolute
+					left: 0
+					top: 5px
+					background: url('../img/arr-right.svg')
+					width: 15px
+					height: 15px
+					background-size: cover
+					//+s(arr-right)
+
+.why
+	&__items
+		+flex(space-between)
+	&__item
+		padding: 25px 40px
+		background: $secondary
+		width: 30%
+		margin-bottom: 30px
+		span
+			color: white
+			font-size: 21px
+			position: relative
+			padding-left: 60px
+			display: inline-block
+			margin-bottom: 25px
+			i
+				position: absolute
+				width: 45px
+				height: 45px
+				background-size: cover
+				left: 0
+				top: 0
+				display: inline-block
+	&__item-actors
+		background: url("../img/actor.svg")
+	&__item-costume
+		background: url("../img/costume.svg")
+	&__item-show
+		background: url("../img/shows.svg")
+	&__item-money
+		background: url("../img/money-save.svg")
+	&__item-satisfy
+		background: url("../img/satisfy.svg")
