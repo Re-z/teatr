@@ -1,6 +1,6 @@
-$primary: #61B82E
+$primary: #e92a49
 $secondary: #2e272f
-
+$third: #dad9da
 
 $desc: 1200
 $tab: 1024
@@ -27,19 +27,21 @@ a
 	margin: 0 auto
 	position: relative
 	padding: 0 10px
-	height: inherit
+	//height: inherit
 	+r($desc)
 		width: auto
 
 .btn
 	text-transform: uppercase
-	background: $secondary
+	background: $primary
 	color: white
 	padding: 8px 20px
 	font-weight: bold
 	text-align: center
 	border-radius: 3px
 	font-size: 16px
+	&_color
+		background: $secondary
 	&:hover
 		background: white
 		color: $secondary
@@ -51,7 +53,8 @@ a
 	height: 755px
 	background: url('../img/header-bg.jpg') center top no-repeat
 	//position: relative
-
+	& .inner
+		height: inherit
 	p
 		font-size: 15px
 		margin-bottom: 15px
@@ -116,11 +119,20 @@ a
 			height: 4px
 			background: white
 			margin-top: 7px
+.content
+	p
+		color: #727176
+		font-size: 16px
+		margin-bottom: 15px
+		&:last-of-type
+			margin-bottom: 0
 
-.ben
-	height: 435px
+.links
 	background: linear-gradient(to top, #2B252C 0%, #352D36 100%)
 	.inner
+		padding: 60px 10px
+		+flex(space-around)
+		z-index: 1
 		&:before
 			display: block
 			content: ''
@@ -128,3 +140,108 @@ a
 			margin: 0 auto
 			height: 309px
 			background: url("../img/splash.png") center center no-repeat
+			position: absolute
+			top: 0
+			z-index: -1
+	&__item
+		text-align: center
+		max-width: 270px
+		div
+			margin: 0 auto
+		strong
+			color: white
+			margin: 3px 0 14px 0
+			font-size: 18px
+			text-transform: uppercase
+			display: block
+		.btn
+			display: inline-block
+			margin-top: 20px
+	&__masc
+		+s(masc)
+	&__curtains
+		+s(curtains)
+	&__paper
+		+s(paper)
+
+.intro
+	background: $third
+	.inner
+		padding: 20px 10px
+		+clr
+	&__img
+		background: url("../img/hat.jpg")
+		width: 267px
+		height: 411px
+		float: left
+		margin-right: 30px
+	&__text-wrap
+		margin-top: 30px
+		//outline: 1px solid red
+		h3
+			font-size: 30px
+			color: #727176
+			span
+				font-size: 55px
+				color: $primary
+		strong
+			color: black
+			font-size: 36px
+			display: block
+			margin-bottom: 30px
+
+
+
+.footer
+	background: $secondary
+	.inner
+		padding: 50px 10px 80px 10px
+		+flex(space-between)
+	p
+		color: #727176
+		font-size: 15px
+		text-transform: uppercase
+		font-weight: bold
+		margin-bottom: 5px
+		padding-left: 70px
+		position: relative
+		&:first-of-type:before
+			display: block
+			content: ''
+			+s(home)
+			position: absolute
+			left: 0
+			top: 0
+	&__mail
+		border-right: 1px solid #727176
+		border-left: 1px solid #727176
+		padding: 0 50px
+		a
+			color: #727176
+			font-size: 15px
+			text-transform: uppercase
+			display: inline-block
+			vertical-align: middle
+			font-weight: bold
+			&:before
+				display: inline-block
+				content: ''
+				+s(mail)
+				margin-right: 10px
+				vertical-align: middle
+	&__copy
+		p:first-of-type:before
+			+s(palace2)
+	&__to-top
+		position: absolute
+		width: 60px
+		height: 55px
+		background: $primary
+		left: 50%
+		bottom: 0
+		margin-left: -30px
+		padding-top: 15px
+		span
+			display: block
+			+s(to-top)
+			margin: 0 auto
