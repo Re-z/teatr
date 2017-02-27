@@ -2,10 +2,19 @@ $primary: #61B82E
 //$primary: #e92a49
 $secondary: #2e272f
 $third: #dad9da
+$fourth: #727176
 
 $desc: 1200
 $tab: 1024
 $mob: 767
+
+@keyframes pulse
+	from
+		transform: none
+	50%
+		transform: scale(1.05)
+	to
+		transform: none
 
 =flex($vert:space-between, $hor:stretch)
 	display: flex
@@ -123,6 +132,7 @@ a
 		right: 0
 		top: 0
 		display: inline-block
+		animation: pulse 2s infinite forwards linear
 		h1
 			opacity: 0
 			font-size: 1px
@@ -153,17 +163,54 @@ a
 		margin-bottom: 15px
 		&:last-of-type
 			margin-bottom: 0
+	h2,h3
+		font-size: 21px
+		margin-bottom: 25px
+		color: white
 	.block
 		padding: 60px 0
 		background: $secondary
-		h2,h3
-			font-size: 21px
-			margin-bottom: 25px
-			color: white
 		&_light
 			background: $third
 			h2,h3
 				color: $secondary
+		&_has-aside
+			.inner
+				+clr
+		&__content
+			width: 850px
+			float: left
+			+clr
+		&__aside
+			width: 300px
+			float: right
+			height: 100%
+			padding: 0 0 0 15px
+
+	ul
+		margin-bottom: 25px
+	li
+		font-size: 16px
+		padding-bottom: 10px
+		border-bottom: 1px solid rgba(#727176, .2)
+		margin-bottom: 10px
+		color: #727176
+		position: relative
+		padding-left: 25px
+		&:last-of-type
+			border-bottom: none
+		&:before
+			display: block
+			content: ''
+			position: absolute
+			left: 0
+			top: 5px
+			background: url('../img/arr-right.svg')
+			width: 15px
+			height: 15px
+			background-size: cover
+//+s(arr-right)
+
 
 .links
 	background: linear-gradient(to top, #2B252C 0%, #352D36 100%)
@@ -246,7 +293,10 @@ a
 		&:first-of-type:before
 			display: block
 			content: ''
-			+s(home)
+			width: 40px
+			height: 40px
+			background: url("../img/home.svg")
+			background-size: cover
 			position: absolute
 			left: 0
 			top: 0
@@ -264,12 +314,18 @@ a
 			&:before
 				display: inline-block
 				content: ''
-				+s(mail)
+				width: 37px
+				height: 37px
+				background: url("../img/mail.svg")
+				background-size: cover
 				margin-right: 10px
 				vertical-align: middle
 	&__copy
 		p:first-of-type:before
-			+s(palace2)
+			background: url("../img/mask.svg")
+			width: 50px
+			height: 50px
+			background-size: cover
 	&__to-top
 		position: absolute
 		width: 60px
@@ -296,53 +352,19 @@ a
 		text-transform: uppercase
 
 .who
-	background: $secondary
-	.inner
-		+clr
-	&__content
-		width: 850px
+	img
+		margin-right: 20px
 		float: left
-		+clr
-		img
-			margin-right: 20px
-			float: left
-			&:nth-last-of-type(odd)
-				float: right
-				margin-left: 20px
-				margin-right: 0
-	&__aside
-		width: 300px
-		float: right
-		height: 100%
-		padding: 0 15px
-		//text-align: right
-		ul
-			margin-bottom: 25px
-			li
-				font-size: 16px
-				padding-bottom: 10px
-				border-bottom: 1px solid rgba(#727176, .2)
-				margin-bottom: 10px
-				color: #727176
-				position: relative
-				padding-left: 25px
-				&:last-of-type
-					border-bottom: none
-				&:before
-					display: block
-					content: ''
-					position: absolute
-					left: 0
-					top: 5px
-					background: url('../img/arr-right.svg')
-					width: 15px
-					height: 15px
-					background-size: cover
-					//+s(arr-right)
+		margin-bottom: 20px
+		&:nth-last-of-type(odd)
+			float: right
+			margin-left: 20px
+			margin-right: 0
+.b-services
+
 
 .why
-	&__items
-		+flex(space-between)
+	+flex(space-between)
 	&__item
 		padding: 25px 40px
 		background: $secondary
@@ -373,3 +395,73 @@ a
 		background: url("../img/money-save.svg")
 	&__item-satisfy
 		background: url("../img/satisfy.svg")
+
+.photo, .video
+	+flex(space-between, flex-start)
+	margin-top: 20px
+	img
+		width: 24%
+		height: auto
+		display: block
+		margin-bottom: 20px
+		cursor: pointer
+	iframe
+		margin-bottom: 20px
+
+
+
+.rep
+	.block__content
+		float: right
+	.block__aside
+		float: left
+		padding: 0 15px 0 0
+		ul
+			margin-left: 20px
+			display: none
+			&.is-visible
+				display: block
+		li
+			cursor: pointer
+			&:hover
+				color: white
+				font-weight: bold
+			&.is-active
+				color: $primary
+				font-weight: bold
+				//border-bottom-color: $primary
+
+	h2
+		cursor: pointer
+		font-size: 18px
+		span
+			width: 15px
+			height: 15px
+			background: url("../img/arr-down.svg")
+			display: inline-block
+			background-size: cover
+			margin-left: 5px
+			vertical-align: middle
+			transition: none
+			&.is-active
+				transform: rotate(-180deg)
+	article
+		display: none
+		+clr
+		&.is-visible
+			display: block
+
+
+		h4
+			color: white
+			text-align: right
+			font-size: 20px
+			text-decoration: underline
+			margin-bottom: 20px
+		img
+			float: right
+			width: 50%
+			margin: 0 0 15px 15px
+
+
+
