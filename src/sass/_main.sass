@@ -407,8 +407,25 @@ a
 		cursor: pointer
 	iframe
 		margin-bottom: 20px
-
-
+.photo
+	&__overlay
+		position: fixed
+		width: 100%
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background: rgba(black, .8)
+		z-index: 10
+		display: none
+		&.is-visible
+			display: block
+		img
+			width: auto
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
 
 .rep
 	.block__content

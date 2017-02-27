@@ -145,6 +145,10 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
 .photo img, .video img { width: 24%; height: auto; display: block; margin-bottom: 20px; cursor: pointer; }
 .photo iframe, .video iframe { margin-bottom: 20px; }
 
+.photo__overlay { position: fixed; width: 100%; left: 0; top: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.8); z-index: 10; display: none; }
+.photo__overlay.is-visible { display: block; }
+.photo__overlay img { width: auto; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
 .rep .block__content { float: right; }
 .rep .block__aside { float: left; padding: 0 15px 0 0; }
 .rep .block__aside ul { margin-left: 20px; display: none; }
