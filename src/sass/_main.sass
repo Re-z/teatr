@@ -170,6 +170,17 @@ a
 	.block
 		padding: 60px 0
 		background: $secondary
+		position: relative
+		&:before
+			display: block
+			content: ""
+			width: 1170px
+			height: 309px
+			background: url(../img/splash.png) center center no-repeat
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
 		&_light
 			background: $third
 			h2,h3
@@ -360,8 +371,6 @@ a
 			float: right
 			margin-left: 20px
 			margin-right: 0
-.b-services
-
 
 .why
 	+flex(space-between)
@@ -399,15 +408,15 @@ a
 .photo, .video
 	+flex(space-between, flex-start)
 	margin-top: 20px
-	img
+	iframe
+		margin-bottom: 20px
+.photo
+	&__img
 		width: 24%
 		height: auto
 		display: block
 		margin-bottom: 20px
 		cursor: pointer
-	iframe
-		margin-bottom: 20px
-.photo
 	&__overlay
 		position: fixed
 		width: 100%
@@ -420,12 +429,39 @@ a
 		display: none
 		&.is-visible
 			display: block
+	&__slider-wrap
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		border: 2px solid white
 		img
+			display: block
+			margin: 0 auto
 			width: auto
-			position: absolute
-			left: 50%
-			top: 50%
-			transform: translate(-50%, -50%)
+			max-width: 900px
+			height: auto
+	&__slider-close
+		position: absolute
+		top: -40px
+		right: -40px
+		background: url("../img/cancel.svg")
+		width: 30px
+		height: 30px
+		background-size: cover
+	&__slider-left, &__slider-right
+		width: 40px
+		height: 40px
+		background: url("../img/slider-arr.svg")
+		position: absolute
+		top: 50%
+		right: - 50px
+		margin-top: -20px
+		background-size: cover
+	&__slider-left
+		transform: scale(-1)
+		right: 0
+		left: -50px
 
 .rep
 	.block__content
@@ -482,3 +518,28 @@ a
 
 
 
+.services
+	&__item
+		margin-top: 20px
+		+clr
+		img
+			float: left
+			margin: 0 20px 20px 0
+		&:nth-of-type(even)
+			img
+				float: right
+				margin: 0 0 20px 20px
+
+.actual
+	b
+		text-decoration: underline
+		font-size: 16px
+		margin-bottom: 15px
+		display: block
+		color: white
+
+.congrats
+	+clr
+	iframe
+		float: left
+		margin: 0 20px 20px 0
