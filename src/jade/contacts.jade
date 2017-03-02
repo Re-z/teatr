@@ -1,0 +1,63 @@
+extends _layout
+
+block title
+	title
+block head
+	meta(name="keywords" content="Get an easy access to essay writing service cheap to order qualitative papers on Purplepandaessays.com. ")
+
+block content
+	include _header
+
+
+	main.content
+		+introLine("Контакти")
+
+		section.block
+			.inner
+				.contacts
+					#map
+					.contacts__box
+						.contacts__info
+							h2 Контактна інформація
+							p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.
+							p: b 03162, М. КИЇВ, ВУЛ. ВИБОРГЗЬКА 82
+							p (044) 361-70-27 <br> (095) 429-81-74 <br> (095) 068-36-38 <br>
+							p: a(href="mailto: re-z@ukr.net") vp-teatr@ukr.net
+						form
+							h2 Форма зв`язку
+							input(type="text" placeholder="Ваше ім`я")
+							input(type="number" placeholder="Ваш телефон")
+							textarea(placeholder="Ваше повідомлення")
+							input(type="submit" value="Відправити").btn
+
+
+
+
+
+
+
+	include _footer
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFknSdXmjuEcstleJLGg0Grwszxx0Ab4s&callback=initMap")
+	script.
+		//google map
+		function initMap() {
+			var myLatLng = {lat: 50.4261628094272, lng: 30.3705827982598};
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 17,
+				center: myLatLng,
+				zoomControlOptions: {
+					position: google.maps.ControlPosition.LEFT_CENTER
+				},
+				streetViewControlOptions: {
+					position: google.maps.ControlPosition.LEFT_BOTTOM
+				}
+			});
+
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'Hotel'
+			});
+		}
+		initMap();
