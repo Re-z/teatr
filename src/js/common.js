@@ -1,4 +1,12 @@
-
+//header burger
+function showMobileMenu(){
+    var burger = document.querySelector('.header__burger');
+    var nav = document.querySelector('.header__nav');
+    burger.addEventListener('click', function(){
+        nav.classList.toggle('is-visible');
+    })
+}
+showMobileMenu();
 
 
 //repertory
@@ -41,7 +49,7 @@ repertoryList();
 //gallery
 function gallerySlider() {
     var photo = document.querySelector('.photo');
-    if(photo) {
+    if(photo && (window.matchMedia('(min-width: 1024px)').matches))  {
         photo.addEventListener('click',function(ev){
             var target = ev.target,
                 overlay = document.querySelector('.photo__overlay'),
