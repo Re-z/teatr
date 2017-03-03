@@ -1,6 +1,8 @@
 $primary: #61B82E
 //$primary: #e92a49
 $secondary: #2e272f
+//$secondary: linear-gradient(to top, #2B252C 0%, #352D36 100%)
+$secondary: #2e272f
 $third: #dad9da
 $fourth: #727176
 
@@ -89,26 +91,38 @@ a
 	&_mainpage
 		height: 755px
 		padding: 0
+		+r($mob)
+			height: auto
+			padding-bottom: 40px
 	& .inner
 		height: inherit
 	p
 		font-size: 15px
 		margin-bottom: 15px
 		color: white
+		+r($mob)
+			font-size: 14px
 		&:last-of-type
 			margin-bottom: 0
+
 	&__box
 		position: absolute
 		right: 0
 		bottom: 0
 		//+clr
 		font-size: 0
+		+r($mob)
+			position: static
+			text-align: center
+
 	&__about, &__gal
 		width: 300px
 		background: $primary
 		padding: 56px 56px 42px 46px
-		//float: left
 		display: inline-block
+		+r($mob)
+			padding: 30px 30px 20px 30px
+			width: 100%
 		h2, h3
 			color: white
 			text-transform: uppercase
@@ -117,6 +131,10 @@ a
 			font-size: 36px
 			margin-bottom: 25px
 			font-weight: normal
+			+r($mob)
+				font-size: 30px
+				padding-bottom: 15px
+				margin-bottom: 15px
 		a
 			display: inline-block
 		p:last-of-type
@@ -133,6 +151,15 @@ a
 		top: 0
 		display: inline-block
 		animation: pulse 2s infinite forwards linear
+		+r($mob)
+			position: static
+			margin: 0 auto
+			display: block
+			text-align: center
+		img
+			+r($mob)
+				width: 150px
+				height: 164px
 		h1
 			opacity: 0
 			font-size: 1px
@@ -158,9 +185,13 @@ a
 			margin-top: 7px
 .content
 	p
-		color: #727176
+		color: $fourth
 		font-size: 16px
 		margin-bottom: 15px
+		+r($tab)
+			font-size: 15px
+		+r($mob)
+			font-size: 14px
 		&:last-of-type
 			margin-bottom: 0
 	h2,h3
@@ -171,6 +202,10 @@ a
 		padding: 60px 0
 		background: $secondary
 		position: relative
+		+r($tab)
+			padding: 50px 0
+		+r($mob)
+			padding: 20px 0 40px 0
 		&:before
 			display: block
 			content: ""
@@ -203,9 +238,9 @@ a
 	li
 		font-size: 16px
 		padding-bottom: 10px
-		border-bottom: 1px solid rgba(#727176, .2)
+		border-bottom: 1px solid rgba($fourth, .2)
 		margin-bottom: 10px
-		color: #727176
+		color: $fourth
 		position: relative
 		padding-left: 25px
 		&:last-of-type
@@ -224,24 +259,12 @@ a
 
 
 .links
-	background: linear-gradient(to top, #2B252C 0%, #352D36 100%)
-	.inner
-		padding: 60px 10px
-		+flex(space-around)
-		z-index: 1
-		&:before
-			display: block
-			content: ''
-			width: 1170px
-			margin: 0 auto
-			height: 309px
-			background: url("../img/splash.png") center center no-repeat
-			position: absolute
-			top: 0
-			z-index: -1
+	+flex(space-around)
 	&__item
 		text-align: center
 		max-width: 270px
+		+r($mob)
+			margin-bottom: 15px
 		div
 			margin: 0 auto
 		strong
@@ -271,57 +294,116 @@ a
 		height: 411px
 		float: left
 		margin-right: 30px
+		+r($mob)
+			float: none
+			margin: 0 auto
+			width: 150px
+			height: 231px
+			background-size: cover
+			display: block
 	&__text-wrap
 		margin-top: 30px
 		//outline: 1px solid red
+		+r($mob)
+			margin-top: 10px
+			text-align: center
 		h3
 			font-size: 30px
-			color: #727176
+			color: $fourth
+			+r($tab)
+				font-size: 25px
+			+r($mob)
+				font-size: 22px
+				margin-bottom: 0
 			span
 				font-size: 55px
 				color: $primary
+				+r($tab)
+					font-size: 50px
+				+r($mob)
+					font-size: 40px
 		strong
 			color: black
 			font-size: 36px
 			display: block
 			margin-bottom: 30px
-
-
+			+r($tab)
+				font-size: 33px
+			+r($mob)
+				font-size: 30px
+				margin-bottom: 10px
 
 .footer
 	background: $secondary
 	.inner
 		padding: 50px 10px 80px 10px
 		+flex(space-between)
+		+r($tab)
+			justify-content: center
+		+r($mob)
+			display: block
+			text-align: center
+			padding-top: 30px
 	p
-		color: #727176
+		color: $fourth
 		font-size: 15px
 		text-transform: uppercase
 		font-weight: bold
 		margin-bottom: 5px
 		padding-left: 70px
 		position: relative
-		&:first-of-type:before
-			display: block
-			content: ''
-			width: 40px
-			height: 40px
-			background: url("../img/home.svg")
-			background-size: cover
-			position: absolute
-			left: 0
-			top: 0
+		+r($mob)
+			font-size: 14px
+			padding-left: 0
+		&:first-of-type
+			+r($mob)
+				padding-top: 50px
+			&:before
+				display: block
+				content: ''
+				width: 40px
+				height: 40px
+				background: url("../img/home.svg")
+				background-size: cover
+				position: absolute
+				left: 0
+				top: 0
+				+r($mob)
+					top: 5px
+					left: 50%
+					transform: translateX(-50%)
+
+	&__address
+		+r($tab)
+			margin: 0 20px
+		+r($mob)
+			display: inline-block
+			margin: 0
 	&__mail
-		border-right: 1px solid #727176
-		border-left: 1px solid #727176
+		border-right: 1px solid $fourth
+		border-left: 1px solid $fourth
 		padding: 0 50px
+		+r($desc)
+			padding: 0 30px
+		+r($tab)
+			margin: 0 20px
+			border: none
+		+r($mob)
+			padding: 20px 0
+			margin: 30px 0
+			border-top: 1px solid $fourth
+			border-bottom: 1px solid $fourth
+
 		a
-			color: #727176
+			color: $fourth
 			font-size: 15px
 			text-transform: uppercase
 			display: inline-block
 			vertical-align: middle
 			font-weight: bold
+			+r($mob)
+				padding-top: 50px
+				position: relative
 			&:before
 				display: inline-block
 				content: ''
@@ -331,12 +413,24 @@ a
 				background-size: cover
 				margin-right: 10px
 				vertical-align: middle
+				+r($mob)
+					position: absolute
+					top: 5px
+					left: 50%
+					transform: translateX(-50%)
+
+
 	&__copy
+		+r($tab)
+			margin-top: 30px
+
 		p:first-of-type:before
 			background: url("../img/mask.svg")
 			width: 50px
 			height: 50px
 			background-size: cover
+			+r($mob)
+				top: -5px
 	&__to-top
 		position: absolute
 		width: 60px
@@ -346,6 +440,9 @@ a
 		bottom: 0
 		margin-left: -30px
 		padding-top: 15px
+		+r($mob)
+			width: 55px
+			height: 50px
 		span
 			display: block
 			+s(to-top)

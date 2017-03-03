@@ -95,9 +95,7 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
 .content li:last-of-type { border-bottom: none; }
 .content li:before { display: block; content: ""; position: absolute; left: 0; top: 5px; background: url("../img/arr-right.svg"); width: 15px; height: 15px; background-size: cover; }
 
-.links { background: -webkit-gradient(linear, left bottom, left top, from(#2B252C), to(#352D36)); background: -webkit-linear-gradient(bottom, #2B252C 0%, #352D36 100%); background: linear-gradient(to top, #2B252C 0%, #352D36 100%); }
-.links .inner { padding: 60px 10px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; z-index: 1; }
-.links .inner:before { display: block; content: ""; width: 1170px; margin: 0 auto; height: 309px; background: url("../img/splash.png") center center no-repeat; position: absolute; top: 0; z-index: -1; }
+.links { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .links__item { text-align: center; max-width: 270px; }
 .links__item div { margin: 0 auto; }
 .links__item strong { color: white; margin: 3px 0 14px 0; font-size: 18px; text-transform: uppercase; display: block; }
@@ -193,9 +191,45 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1200px){
- .inner{ width: auto; } }
+ .inner{ width: auto; }
+ .footer__mail{ padding: 0 30px; } }
+@media only screen and (max-width: 1024px){
+ .content p{ font-size: 15px; }
+ .content .block{ padding: 50px 0; }
+ .intro__text-wrap h3{ font-size: 25px; }
+ .intro__text-wrap h3 span{ font-size: 50px; }
+ .intro__text-wrap strong{ font-size: 33px; }
+ .footer .inner{ -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+ .footer__address{ margin: 0 20px; }
+ .footer__mail{ margin: 0 20px; border: none; }
+ .footer__copy{ margin-top: 30px; } }
 @media only screen and (max-width: 767px){
- .header__burger{ display: block; } }
+ .header_mainpage{ height: auto; padding-bottom: 40px; }
+ .header p{ font-size: 14px; }
+ .header__box{ position: static; text-align: center; }
+ .header__about, .header__gal{ padding: 30px 30px 20px 30px; width: 100%; }
+ .header__about h2, .header__about h3, .header__gal h2, .header__gal h3{ font-size: 30px; padding-bottom: 15px; margin-bottom: 15px; }
+ .header__logo{ position: static; margin: 0 auto; display: block; text-align: center; }
+ .header__logo img{ width: 150px; height: 164px; }
+ .header__burger{ display: block; }
+ .content p{ font-size: 14px; }
+ .content .block{ padding: 20px 0 40px 0; }
+ .links__item{ margin-bottom: 15px; }
+ .intro__img{ float: none; margin: 0 auto; width: 150px; height: 231px; background-size: cover; display: block; }
+ .intro__text-wrap{ margin-top: 10px; text-align: center; }
+ .intro__text-wrap h3{ font-size: 22px; margin-bottom: 0; }
+ .intro__text-wrap h3 span{ font-size: 40px; }
+ .intro__text-wrap strong{ font-size: 30px; margin-bottom: 10px; }
+ .footer .inner{ display: block; text-align: center; padding-top: 30px; }
+ .footer p{ font-size: 14px; padding-left: 0; }
+ .footer p:first-of-type{ padding-top: 50px; }
+ .footer p:first-of-type:before{ top: 5px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+ .footer__address{ display: inline-block; margin: 0; }
+ .footer__mail{ padding: 20px 0; margin: 30px 0; border-top: 1px solid #727176; border-bottom: 1px solid #727176; }
+ .footer__mail a{ padding-top: 50px; position: relative; }
+ .footer__mail a:before{ position: absolute; top: 5px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+ .footer__copy p:first-of-type:before{ top: -5px; }
+ .footer__to-top{ width: 55px; height: 50px; } }
 
 
 
