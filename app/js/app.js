@@ -25,16 +25,19 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 //header burger
 function showMobileMenu(){
     var burger = document.querySelector('.header__burger');
-    var nav = document.querySelector('.header__nav');
-    burger.addEventListener('click', function(){
-        nav.classList.toggle('is-visible');
-    })
+    if(burger){
+        var nav = document.querySelector('.header__nav');
+        burger.addEventListener('click', function(){
+            nav.classList.toggle('is-visible');
+        })
+    }
+
 }
 showMobileMenu();
 
 
 //repertory
-function repertoryList(){
+function changeRepertoryOnAsideClick(){
     var repAside = document.querySelector('.rep__aside');
     if(repAside){
         repAside.addEventListener('click', function(ev){
@@ -67,9 +70,21 @@ function repertoryList(){
         });
     }
 }
-repertoryList();
+changeRepertoryOnAsideClick();
 
-
+function changeRepertoryOnArticleClick(){
+    var repertoryBlock = document.querySelector('.rep');
+    if(repertoryBlock){
+        repertoryBlock.addEventListener('click', function (ev) {
+            var target = ev.target;
+            if(target.tagName === "H4") {
+                target.classList.toggle('is-active');
+                target.nextElementSibling.classList.toggle('is-visible');
+            }
+        })
+    }
+};
+changeRepertoryOnArticleClick();
 //gallery
 function gallerySlider() {
     var photo = document.querySelector('.photo');

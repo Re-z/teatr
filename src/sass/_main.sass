@@ -223,6 +223,7 @@ a
 			font-size: 15px
 		+r($mob)
 			font-size: 14px
+			text-align: center
 		&:last-of-type
 			margin-bottom: 0
 	h2,h3
@@ -231,6 +232,8 @@ a
 		color: white
 		+r($mob)
 			font-size: 18px
+			margin-bottom: 15px
+			text-align: center
 	.block
 		padding: 60px 0
 		background: $secondary
@@ -520,6 +523,9 @@ a
 			+r($mob)
 				float: none
 				margin: 0 auto 20px auto
+	p
+		+r($mob)
+			text-align: center
 
 .why
 	+flex(space-between)
@@ -549,6 +555,9 @@ a
 				left: 0
 				top: 0
 				display: inline-block
+		p
+			+r($mob)
+				text-align: left
 	&__item-actors
 		background: url("../img/actor.svg")
 	&__item-costume
@@ -645,6 +654,10 @@ a
 	.block__aside
 		float: left
 		padding: 0 15px 0 0
+		+r($desc)
+			display: block
+		+r($mob)
+			display: none
 		ul
 			margin-left: 20px
 			display: none
@@ -677,9 +690,10 @@ a
 	article
 		display: none
 		+clr
+		+r($mob)
+			display: block
 		&.is-visible
 			display: block
-
 
 		h4
 			color: white
@@ -687,24 +701,59 @@ a
 			font-size: 20px
 			text-decoration: underline
 			margin-bottom: 20px
+			&.is-active
+				color: $primary
+			+r($mob)
+				text-align: center
+				font-size: 18px
+				color: $third
+				text-decoration: none
+
+		div
+			+clr
+			+r($mob)
+				display: none
+			&.is-visible
+				display: block
+				margin-bottom: 20px
 		img
 			float: right
 			width: 50%
 			margin: 0 0 15px 15px
-
-
+			+r($desc)
+				margin: 15px auto
+				float: none
+				display: block
 
 .services
 	&__item
 		margin-top: 20px
+		+r($mob)
+			margin-top: 30px
 		+clr
 		img
 			float: left
 			margin: 0 20px 20px 0
+			display: block
+			max-width: 100%
+			height: auto
+			+r($mob)
+				float: none
+				margin: 0 auto 15px auto
+		h3
+			+r($mob)
+				text-align: center
+				margin-bottom: 15px
+		p
+			+r($mob)
+				text-align: center
 		&:nth-of-type(even)
 			img
 				float: right
 				margin: 0 0 20px 20px
+				+r($mob)
+					float: none
+					margin: 0 auto 15px auto
 
 .actual
 	b
@@ -718,21 +767,48 @@ a
 	+clr
 	iframe
 		float: left
-		margin: 0 20px 20px 0
+		margin: 0 40px 20px 0
+		width: 49%
+		height: 400px
+		+r($tab)
+			float: none
+			margin: 20px auto
+			display: block
+			width: 70%
+		+r($mob)
+			width: 100%
+			height: 300px
+		+r($smallMob)
+			width: 100%
+			height: 300px
+
 #map
 	width: 100%
 	height: 400px
 	margin-bottom: 30px
+	+r($mob)
+		height: 300px
+		margin-bottom: 20px
 
 .contacts
 	margin-bottom: 80px
+	+r($mob)
+		margin-bottom: 50px
 	&__box
 		+flex
 	&__info
 		width: 300px
+		+r($mob)
+			width: 100%
+			margin-bottom: 30px
 	form
 		font-size: 0
 		width: 67%
+		+r($tab)
+			width: 57%
+		+r($mob)
+			width: 100%
+			text-align: center
 		input[type="text"], input[type="number"], textarea
 			width: 50%
 			display: inline-block
@@ -744,8 +820,12 @@ a
 			border: 2px solid black
 			&:focus
 				outline: 2px solid $primary
-
+			+r($mob)
+				width: 100%
+				margin-bottom: 15px
 		textarea
 			width: 100%
 			resize: none
 			height: 200px
+			+r($mob)
+				height: 150px
