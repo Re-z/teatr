@@ -570,7 +570,7 @@ a
 		background: url("../img/satisfy.svg")
 
 .photo, .video
-	+flex(space-between, flex-start)
+	+flex(space-between, center)
 	margin-top: 20px
 	&:after
 		display: none !important
@@ -589,13 +589,12 @@ a
 
 .photo
 	&__img
-		width: 24%
+		width: 32%
 		height: auto
 		display: block
 		margin-bottom: 20px
 		cursor: pointer
-		+r($tab)
-			width: 32%
+
 		+r($mob)
 			width: 49%
 		+r($smallMob)
@@ -717,9 +716,9 @@ a
 				display: block
 				margin-bottom: 20px
 		img
-			float: right
-			width: 50%
-			margin: 0 0 15px 15px
+			float: left
+			width: 60%
+			margin: 0 15px 15px 0
 			+r($desc)
 				margin: 15px auto
 				float: none
