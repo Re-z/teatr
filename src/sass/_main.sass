@@ -484,6 +484,7 @@ a
 		bottom: 0
 		margin-left: -30px
 		padding-top: 15px
+		cursor: pointer
 		+r($mob)
 			width: 55px
 			height: 50px
@@ -817,6 +818,8 @@ a
 			font-size: 16px
 			background: $third
 			border: 2px solid black
+			&::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+				-webkit-appearance: none
 			&:focus
 				outline: 2px solid $primary
 			+r($mob)

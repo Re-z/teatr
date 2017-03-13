@@ -122,7 +122,7 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
 .footer__mail a { color: #727176; font-size: 15px; text-transform: uppercase; display: inline-block; vertical-align: middle; font-weight: bold; }
 .footer__mail a:before { display: inline-block; content: ""; width: 37px; height: 37px; background: url("../img/mail.svg"); background-size: cover; margin-right: 10px; vertical-align: middle; }
 .footer__copy p:first-of-type:before { background: url("../img/mask.svg"); width: 50px; height: 50px; background-size: cover; }
-.footer__to-top { position: absolute; width: 60px; height: 55px; background: #61B82E; left: 50%; bottom: 0; margin-left: -30px; padding-top: 15px; }
+.footer__to-top { position: absolute; width: 60px; height: 55px; background: #61B82E; left: 50%; bottom: 0; margin-left: -30px; padding-top: 15px; cursor: pointer; }
 .footer__to-top span { display: block; background-image: url("../img/icons.png"); width: 31px; height: 19px; background-position: -219px -184px; margin: 0 auto; }
 
 .intro-line { padding: 21px 0; background: #61B82E; }
@@ -192,6 +192,7 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
 .contacts__info { width: 300px; }
 .contacts form { font-size: 0; width: 67%; }
 .contacts form input[type="text"], .contacts form input[type="number"], .contacts form textarea { width: 50%; display: inline-block; padding: 5px 15px; margin-bottom: 20px; -webkit-transition: none; transition: none; font-size: 16px; background: #dad9da; border: 2px solid black; }
+.contacts form input[type="text"]::-webkit-inner-spin-button, .contacts form input[type="text"]::-webkit-outer-spin-button, .contacts form input[type="number"]::-webkit-inner-spin-button, .contacts form input[type="number"]::-webkit-outer-spin-button, .contacts form textarea::-webkit-inner-spin-button, .contacts form textarea::-webkit-outer-spin-button { -webkit-appearance: none; }
 .contacts form input[type="text"]:focus, .contacts form input[type="number"]:focus, .contacts form textarea:focus { outline: 2px solid #61B82E; }
 .contacts form textarea { width: 100%; resize: none; height: 200px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
