@@ -15,15 +15,16 @@ block content
 		section.block
 			.inner
 				.contacts
-					#map
+					//#map
+					<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4769823182796!2d30.430333315731314!3d50.450841979475406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc3c0eb1581d%3A0x8ec1705b1e980e6!2z0LLRg9C70LjRhtGPINCS0LjQsdC-0YDQt9GM0LrQsCwgODIsINCa0LjRl9Cy!5e0!3m2!1suk!2sua!4v1490277531428" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					.contacts__box
 						.contacts__info
 							h2 Контактна інформація
-							p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.
+							p Наш адміністратор із задоволенням відповість на ваші запитання з понеділка по п`ятницю з 9-00 до 18-00.
 							p: b 03162, М. КИЇВ, ВУЛ. ВИБОРГЗЬКА 82
 							p (044) 361-70-27 <br> (095) 429-81-74 <br> (095) 068-36-38 <br>
 							p: a(href="mailto: re-z@ukr.net" title="Напишіть нам") vp-teatr@ukr.net
-						form
+						form#form
 							h2 Форма зв`язку
 							input(type="text" placeholder="Ваше ім`я")
 							input(type="number" placeholder="Ваш телефон")
@@ -37,27 +38,27 @@ block content
 
 
 	include _footer
-	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFknSdXmjuEcstleJLGg0Grwszxx0Ab4s&callback=initMap")
-	script.
-		//google map
-		function initMap() {
-			var myLatLng = {lat: 50.4261628094272, lng: 30.3705827982598};
-
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 17,
-				center: myLatLng,
-				zoomControlOptions: {
-					position: google.maps.ControlPosition.LEFT_CENTER
-				},
-				streetViewControlOptions: {
-					position: google.maps.ControlPosition.LEFT_BOTTOM
-				}
-			});
-
-			var marker = new google.maps.Marker({
-				position: myLatLng,
-				map: map,
-				title: 'Hotel'
-			});
-		}
-		initMap();
+	//script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFknSdXmjuEcstleJLGg0Grwszxx0Ab4s&callback=initMap")
+	//script.
+	//	//google map
+	//	function initMap() {
+	//		var myLatLng = {lat: 50.4261628094272, lng: 30.3705827982598};
+	//
+	//		var map = new google.maps.Map(document.getElementById('map'), {
+	//			zoom: 17,
+	//			center: myLatLng,
+	//			zoomControlOptions: {
+	//				position: google.maps.ControlPosition.LEFT_CENTER
+	//			},
+	//			streetViewControlOptions: {
+	//				position: google.maps.ControlPosition.LEFT_BOTTOM
+	//			}
+	//		});
+	//
+	//		var marker = new google.maps.Marker({
+	//			position: myLatLng,
+	//			map: map,
+	//			title: 'Hotel'
+	//		});
+	//	}
+	//	initMap();
