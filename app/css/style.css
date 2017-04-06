@@ -213,6 +213,7 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
  .nav a{ font-size: 18px; }
  .content p{ font-size: 15px; }
  .content .block{ padding: 50px 0; }
+ .content li{ font-size: 15px; }
  .intro__text-wrap h3{ font-size: 25px; }
  .intro__text-wrap h3 span{ font-size: 50px; }
  .intro__text-wrap strong{ font-size: 33px; }
@@ -240,6 +241,7 @@ a:active { -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform
  .content p{ font-size: 14px; text-align: center; }
  .content h2, .content h3{ font-size: 18px; margin-bottom: 15px; text-align: center; }
  .content .block{ padding: 20px 0 40px 0; }
+ .content li{ font-size: 14px; }
  .links__item{ margin-bottom: 15px; }
  .intro__img{ float: none; margin: 0 auto; width: 150px; height: 231px; background-size: cover; display: block; }
  .intro__text-wrap{ margin-top: 10px; text-align: center; }
